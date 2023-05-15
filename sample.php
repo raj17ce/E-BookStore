@@ -81,7 +81,7 @@
             <span style="font-size: 2em; color: white; margin-right: 0.5rem;">
                 <i class="fas fa-book-open"></i>
             </span>
-            <a class="navbar-brand" href="home.php">E-BookStore</a>
+            <a class="navbar-brand" href="userhome.php">E-BookStore</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +90,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto ">
-                    <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
+                    <a class="nav-item nav-link " href="userhome.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="login.php" style="color: antiquewhite" ;>Login</a>
                     <a class="nav-item nav-link" href="register.php" style="color: antiquewhite" ;>Register</a>
@@ -106,10 +106,10 @@
                 <img class="d-block w-300" src="./img/home-carousel/image-1.jpeg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="./img/home-carousel/image-2.jpeg" alt="Second slide">
+                <img class="d-block w-300" src="./img/home-carousel/image-1.jpeg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="./img/home-carousel/image-3.jpeg" alt="Third slide">
+                <img class="d-block w-300" src="./img/home-carousel/image-1.jpeg" alt="Third slide">
             </div>
         </div>
 
@@ -130,23 +130,23 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Biographies</h5>
-                        <a href="biographies.php" class="btn btn-primary">Click Here</a>
+                        <a href="login.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Academics</h5>
-                        <a href="academicandprofessional.php" class="btn btn-primary">Click Here</a>
+                        <h5 class="card-title">Action & Adventure</h5>
+                        <a href="login.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Literature</h5>
-                        <a href="literatureandfiction.php" class="btn btn-primary">Click Here</a>
+                        <h5 class="card-title">Art & Films</h5>
+                        <a href="login.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Other Books</h5>
-                        <a href="otherbooks.php" class="btn btn-primary">Click Here</a>
+                        <a href="login.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
