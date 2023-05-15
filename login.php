@@ -67,7 +67,6 @@ ob_start();
                 <div class="navbar-nav ml-auto ">
                     <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="about.html" style="color: antiquewhite" ;>About Us</a>
                     <a class="nav-item nav-link" href="login.php" style="color: antiquewhite" ;>Login</a>
                     <a class="nav-item nav-link" href="register.php" style="color: antiquewhite" ;>Register</a>
                 </div>

@@ -81,7 +81,7 @@
             <span style="font-size: 2em; color: white; margin-right: 0.5rem;">
                 <i class="fas fa-book-open"></i>
             </span>
-            <a class="navbar-brand" href="home.php">E-BookStore</a>
+            <a class="navbar-brand" href="userhome.php">E-BookStore</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,14 +90,12 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto ">
-                    <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
+                    <a class="nav-item nav-link " href="userhome.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="about.html" style="color: antiquewhite" ;>About Us</a>
                     <a class="nav-item nav-link" href="cart.php" style="color: antiquewhite" ;>My cart</a>
                     <a class="nav-item nav-link" href="logout.php" style="color: antiquewhite" ;>Logout</a>
                 </div>
             </div>
-
         </nav>
     </div>
 
