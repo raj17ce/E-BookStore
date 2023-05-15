@@ -114,7 +114,6 @@ ob_start();
                 echo "<br>";
                 echo "<h4>Incorrect email/password!</h4>";
             }
-
         }
 
         ob_end_flush();

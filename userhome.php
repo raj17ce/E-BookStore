@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>MyBrary</title>
+    <title>E-BookStore</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -104,13 +104,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-300" src="p1.jpeg" alt="First slide">
+                <img class="d-block w-300" src="./img/home-carousel/image-1.jpeg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="p2.jpeg" alt="Second slide">
+                <img class="d-block w-300" src="./img/home-carousel/image-2.jpeg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="p3.jpeg" alt="Third slide">
+                <img class="d-block w-300" src="./img/home-carousel/image-3.jpeg" alt="Third slide">
             </div>
         </div>
 
