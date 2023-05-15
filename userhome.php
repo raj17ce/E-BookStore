@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>E-BookStore</title>
+    <title>MyBrary</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -93,8 +93,8 @@
                     <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="about.html" style="color: antiquewhite" ;>About Us</a>
-                    <a class="nav-item nav-link" href="login.php" style="color: antiquewhite" ;>Login</a>
-                    <a class="nav-item nav-link" href="register.php" style="color: antiquewhite" ;>Register</a>
+                    <a class="nav-item nav-link" href="cart.php" style="color: antiquewhite" ;>My cart</a>
+                    <a class="nav-item nav-link" href="logout.php" style="color: antiquewhite" ;>Logout</a>
                 </div>
             </div>
 
@@ -104,13 +104,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-300" src="./img/home-carousel/image-1.jpeg" alt="First slide">
+                <img class="d-block w-300" src="p1.jpeg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="./img/home-carousel/image-2.jpeg" alt="Second slide">
+                <img class="d-block w-300" src="p2.jpeg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-300" src="./img/home-carousel/image-3.jpeg" alt="Third slide">
+                <img class="d-block w-300" src="p3.jpeg" alt="Third slide">
             </div>
         </div>
 
