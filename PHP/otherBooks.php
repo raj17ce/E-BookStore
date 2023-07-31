@@ -13,9 +13,9 @@ if (!isset($_SESSION['username']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Books">
-    <title>Biographies</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <title>Other Books</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/custom.css" rel="stylesheet">
 
     <style>
         #books {
@@ -45,10 +45,12 @@ if (!isset($_SESSION['username']))
 
 <body>
 
+
+
     <div id="top">
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
             <div>
-                <form role="search" action="Result.php" method="post">
+                <form role="search" action="./result.php" method="post">
                     <input type="text" name="keyword" class="form-control"
                         placeholder="Search for a Book , Author Or Category"
                         style="width:80%;margin:20px 10% 20px 10%;">
@@ -56,26 +58,24 @@ if (!isset($_SESSION['username']))
             </div>
         </div>
 
-
         <div class="container-fluid" id="books">
             <div class="row">
                 <div class="col-xs-12 text-center" id="heading">
-                    <h2 style="color:rgb(228, 55, 25);text-transform:uppercase;margin-bottom:0px;"> Biographies and Auto
-                        Biographies </h2>
+                    <h2 style="color:rgb(228, 55, 25);text-transform:uppercase;margin-bottom:0px;"> All Books </h2>
                 </div>
             </div>
 
             <?php
-            include("config.php");
-            $query = "SELECT * FROM products WHERE Category='Biographies and Auto Biographies' ORDER BY Price";
+            include("./config.php");
+            $query = "SELECT * FROM products ORDER BY Price";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
             $i = 0;
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $path = "img/books/" . $row['PID'] . ".jpg";
-                    $description = "description.php?ID=" . $row["PID"];
+                    $path = "../img/books/" . $row['PID'] . ".jpg";
+                    $description = "./description.php?ID=" . $row["PID"];
                     if ($i % 4 == 0)
                         echo '<div class="row">';
                     echo '
@@ -97,10 +97,11 @@ if (!isset($_SESSION['username']))
                         echo '</div>';
                 }
             }
+            echo '</div>';
+
             ?>
-        </div>;
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

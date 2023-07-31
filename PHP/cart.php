@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['username']))
     header("location: login.php?Message=Login To Continue");
-include "config.php";
+include "./config.php";
 $customer = $_SESSION['username'];
 ?>
 <?php
@@ -38,8 +38,8 @@ if (isset($_GET['remove'])) {
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>My Cart</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/custom.css" rel="stylesheet">
     <style>
         #cart {
             margin-top: 30px;
@@ -64,7 +64,7 @@ if (isset($_GET['remove'])) {
     <div id="top">
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
             <div>
-                <form role="search" method="POST" action="Result.php">
+                <form role="search" method="POST" action="./result.php">
                     <input type="text" class="form-control" name="keyword" style="width:80%; margin:20px 10% 20px 10%;"
                         placeholder="Search for a Book , Author Or Category">
                 </form>
@@ -104,7 +104,7 @@ if (isset($_GET['remove'])) {
                 $i = 1;
                 $j = 0;
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $path = "img/books/" . $row['PID'] . ".jpg";
+                    $path = "../img/books/" . $row['PID'] . ".jpg";
                     $Stotal = $row['Quantity'] * $row['Price'];
                     if ($i % 2 == 1)
                         $offset = 1;
@@ -125,7 +125,7 @@ if (isset($_GET['remove'])) {
                                                       									Quantity : ' . $row['Quantity'] . ' <br>
                                                       									Price : ' . $row['Price'] . ' <br>
                                                       									Sub Total : ' . $Stotal . ' <br>
-                                                                       <a href="cart.php?remove=' . $row['PID'] . '" class="btn btn-sm"
+                                                                       <a href="./cart.php?remove=' . $row['PID'] . '" class="btn btn-sm"
                                                                           style="background:#D67B22;color:white;font-weight:800;">
                                                                           Remove
                                                                         </a>
@@ -152,10 +152,10 @@ if (isset($_GET['remove'])) {
                 echo '<br> <br>';
                 echo '<div class="row">
                              <div class="col-xs-8 col-xs-offset-2  col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3 col-lg-4 col-lg-offset-3">
-                                  <a href="userhome.php" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;">Continue Shopping</a>
+                                  <a href="./userHome.php" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;">Continue Shopping</a>
                              </div>
                              <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-4 ">
-                                  <a href="cart.php?place=true" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;margin-top:5px;">Place Order</a>
+                                  <a href="./cart.php?place=true" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;margin-top:5px;">Place Order</a>
                              </div>
                            </div>
                            ';
@@ -168,7 +168,7 @@ if (isset($_GET['remove'])) {
                          </div>
                          <div class="row">
                              <div class="col-xs-9 col-xs-offset-3 col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5">
-                                  <a href="userhome.php" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;">Do Some Shopping</a>
+                                  <a href="./userHome.php" class="btn btn-lg" style="background:#D67B22;color:white;font-weight:800;">Do Some Shopping</a>
                              </div>
                           </div>';
             }

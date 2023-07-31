@@ -56,7 +56,7 @@ ob_start();
             <span style="font-size: 2em; color: white; margin-right: 0.5rem;">
                 <i class="fas fa-book-open"></i>
             </span>
-            <a class="navbar-brand" href="home.php">E-BookStore</a>
+            <a class="navbar-brand" href="../index.php">E-BookStore</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,10 +65,10 @@ ob_start();
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto ">
-                    <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
+                    <a class="nav-item nav-link " href="../index.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="login.php" style="color: antiquewhite" ;>Login</a>
-                    <a class="nav-item nav-link" href="register.php" style="color: antiquewhite" ;>Register</a>
+                    <a class="nav-item nav-link" href="./login.php" style="color: antiquewhite" ;>Login</a>
+                    <a class="nav-item nav-link" href="./register.php" style="color: antiquewhite" ;>Register</a>
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ ob_start();
         <?php
         session_start();
         if (isset($_POST['loginsubmit'])) {
-            require_once('config.php');
+            require_once('./config.php');
             $username = mysqli_real_escape_string($conn, $_POST['loginmail']);
             $password = mysqli_real_escape_string($conn, $_POST['loginpassword']);
             $query = "SELECT * FROM userinfo WHERE email='$username' AND password='$password'";
@@ -108,7 +108,7 @@ ob_start();
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['username'] = $username;
                 $_SESSION['success'] = "You are now logged in";
-                header('location: userhome.php');
+                header('location: userHome.php');
             } else {
                 echo "<br>";
                 echo "<h4>Incorrect email/password!</h4>";

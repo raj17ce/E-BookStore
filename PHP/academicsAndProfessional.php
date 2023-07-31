@@ -14,8 +14,8 @@ if (!isset($_SESSION['username']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Books">
     <title>Academic And Professional</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/custom.css" rel="stylesheet">
 
     <style>
         #books {
@@ -50,7 +50,7 @@ if (!isset($_SESSION['username']))
     <div id="top">
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
             <div>
-                <form role="search" action="Result.php" method="post">
+                <form role="search" action="./result.php" method="post">
                     <input type="text" name="keyword" class="form-control"
                         placeholder="Search for a Book , Author Or Category"
                         style="width:80%;margin:20px 10% 20px 10%;">
@@ -67,7 +67,7 @@ if (!isset($_SESSION['username']))
             </div>
 
             <?php
-            include("config.php");
+            include("./config.php");
             $query = "SELECT * FROM products WHERE Category='Academic and Professional' ORDER BY Price";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
@@ -75,8 +75,8 @@ if (!isset($_SESSION['username']))
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $path = "img/books/" . $row['PID'] . ".jpg";
-                    $description = "description.php?ID=" . $row["PID"];
+                    $path = "../img/books/" . $row['PID'] . ".jpg";
+                    $description = "./description.php?ID=" . $row["PID"];
                     if ($i % 4 == 0)
                         echo '<div class="row">';
                     echo '

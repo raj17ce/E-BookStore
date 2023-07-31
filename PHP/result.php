@@ -12,10 +12,8 @@ if (!isset($_SESSION['username']))
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/my.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/custom.css" type="text/css">
     <style>
         #books .row {
             margin-top: 30px;
@@ -44,14 +42,14 @@ if (!isset($_SESSION['username']))
     <div id="top">
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
             <div>
-                <form role="search" method="POST" action="Result.php">
+                <form role="search" method="POST" action="./result.php">
                     <input type="text" class="form-control" name="keyword" style="width:80%;margin:20px 10% 20px 10%;"
                         placeholder="Search for a Book , Author Or Category">
                 </form>
             </div>
         </div>
         <?php
-        include('config.php');
+        include('./config.php');
         $keyword = $_POST['keyword'];
 
         $query = "select * from products  where PID like '%{$keyword}%' OR Title like '%{$keyword}%' OR Author like '%{$keyword}%' OR Publisher like '%{$keyword}%' OR Category like '%{$keyword}%'";
@@ -67,8 +65,8 @@ if (!isset($_SESSION['username']))
         </div>';
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $path = "img/books/" . $row['PID'] . ".jpg";
-                $description = "description.php?ID=" . $row["PID"];
+                $path = "../img/books/" . $row['PID'] . ".jpg";
+                $description = "./description.php?ID=" . $row["PID"];
                 if ($i % 3 == 0)
                     $offset = 0;
                 else

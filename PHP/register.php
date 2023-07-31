@@ -56,7 +56,7 @@
             <span style="font-size: 2em; color: white; margin-right: 0.5rem;">
                 <i class="fas fa-book-open"></i>
             </span>
-            <a class="navbar-brand" href="home.php">E-BookStore</a>
+            <a class="navbar-brand" href="../index.php">E-BookStore</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,10 +65,10 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto ">
-                    <a class="nav-item nav-link " href="home.php" style="color: antiquewhite" ;>Home <span
+                    <a class="nav-item nav-link " href="../index.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="login.php" style="color: antiquewhite" ;>Login</a>
-                    <a class="nav-item nav-link" href="register.php" style="color: antiquewhite" ;>Register</a>
+                    <a class="nav-item nav-link" href="./login.php" style="color: antiquewhite" ;>Login</a>
+                    <a class="nav-item nav-link" href="./register.php" style="color: antiquewhite" ;>Register</a>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                 <input type="text" class="form-control" required name="add" id="add" placeholder="Enter your address"
                     style="color: black;">
             </div>
-            <a href="login.php" style="color: aliceblue;">Already a member? Log In </a><br><br>
+            <a href="./login.php" style="color: aliceblue;">Already a member? Log In </a><br><br>
             <button type="submit" class="btn btn-primary" name="submit"
                 style="background-color: blue;box-shadow: 2px 2px white;">Submit</button>
         </form>
@@ -137,7 +137,7 @@
             if ($varpassword != $varcpassword) {
                 echo "<h4>Entered Passwords do not match! Try Again.</h4>";
             } else {
-                require_once('config.php');
+                require_once('./config.php');
                 $user_check_query = "SELECT * FROM userinfo WHERE email = '$varemail' LIMIT 1";
                 $result = mysqli_query($conn, $user_check_query);
                 $user = mysqli_fetch_assoc($result);

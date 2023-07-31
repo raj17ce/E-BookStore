@@ -81,7 +81,7 @@
             <span style="font-size: 2em; color: white; margin-right: 0.5rem;">
                 <i class="fas fa-book-open"></i>
             </span>
-            <a class="navbar-brand" href="userhome.php">E-BookStore</a>
+            <a class="navbar-brand" href="./index.php">E-BookStore</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,12 +90,13 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto ">
-                    <a class="nav-item nav-link " href="userhome.php" style="color: antiquewhite" ;>Home <span
+                    <a class="nav-item nav-link " href="./index.php" style="color: antiquewhite" ;>Home <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="cart.php" style="color: antiquewhite" ;>My cart</a>
-                    <a class="nav-item nav-link" href="logout.php" style="color: antiquewhite" ;>Logout</a>
+                    <a class="nav-item nav-link" href="./PHP/login.php" style="color: antiquewhite" ;>Login</a>
+                    <a class="nav-item nav-link" href="./PHP/register.php" style="color: antiquewhite" ;>Register</a>
                 </div>
             </div>
+
         </nav>
     </div>
 
@@ -129,7 +130,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Biographies</h5>
-                        <a href="biographies.php" class="btn btn-primary">Click Here</a>
+                        <a href="./PHP/biographies.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +138,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Academics</h5>
-                        <a href="academicandprofessional.php" class="btn btn-primary">Click Here</a>
+                        <a href="./PHP/academicsAndProfessional.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
@@ -145,7 +146,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Literature</h5>
-                        <a href="literatureandfiction.php" class="btn btn-primary">Click Here</a>
+                        <a href="./PHP/literatureAndFiction.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
@@ -153,7 +154,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Other Books</h5>
-                        <a href="otherbooks.php" class="btn btn-primary">Click Here</a>
+                        <a href="./PHP/otherBooks.php" class="btn btn-primary">Click Here</a>
                     </div>
                 </div>
             </div>
@@ -173,7 +174,6 @@
         <footer class="foot">
             &copy;2023 &nbsp;<span class="separator">|</span> E-BookStore
         </footer>
-
     </div>
 
 </body>

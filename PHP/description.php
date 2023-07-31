@@ -16,8 +16,8 @@ if (!isset($_SESSION['username']))
     <meta name="author" content="Shivangi Gupta">
     <title> Description</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../CSS/custom.css" rel="stylesheet">
 
     <style>
         @media only screen and (width: 768px) {
@@ -98,7 +98,7 @@ if (!isset($_SESSION['username']))
     <div id="top">
         <div id="searchbox" class="container-fluid" style="width:112%;margin-left:-6%;margin-right:-6%;">
             <div>
-                <form role="search" action="Result.php" method="post">
+                <form role="search" action="./result.php" method="post">
                     <input type="text" name="keyword" class="form-control"
                         placeholder="Search for a Book , Author Or Category"
                         style="width:80%;margin:20px 10% 20px 10%;">
@@ -109,15 +109,15 @@ if (!isset($_SESSION['username']))
 
 
     <?php
-    include "config.php";
+    include "./config.php";
     $PID = $_GET['ID'];
     $query = "SELECT * FROM products WHERE PID='$PID'";
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $path = "img/books/" . $row['PID'] . ".jpg";
-            $target = "cart.php?ID=" . $PID . "&";
+            $path = "../img/books/" . $row['PID'] . ".jpg";
+            $target = "./cart.php?ID=" . $PID . "&";
             echo '
   <div class="container-fluid" id="books">
     <div class="row">
